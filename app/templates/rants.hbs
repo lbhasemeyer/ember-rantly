@@ -1,6 +1,8 @@
 {{#each rant in model}}
-  {{rant.title}}
-  {{rant.body}}
+  <div class="a-rant">
+    <h3>{{rant.title}}</h3>
+    {{rant.body}}
+  </div>
 {{/each}}
 
 {{outlet}}

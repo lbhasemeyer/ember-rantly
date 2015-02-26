@@ -2,10 +2,15 @@
   {{#each rant in model}}
   <div class="a-rant">
     <header class="rant-header">
-      <h3>{{rant.title}}</h3>
+      {{#link-to 'rant' rant}}
+        <h3>{{rant.title}}</h3>
+      {{/link-to}}
       <button class="edit-rant">Edit</button>
     </header>
-    {{rant.body}}
+    <div class="small-user-area">
+      <div class="small-user-photo"></div>
+    </div>
+    <p>{{rant.body}}</p>
   </div>
   {{/each}}
 </section>

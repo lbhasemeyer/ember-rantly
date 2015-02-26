@@ -11,6 +11,12 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
 .top-header {
   background: #34495e;
   min-height: 53px;
@@ -77,6 +83,42 @@ button.new-rant:hover {
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid #1abc9c;
+  border-radius: 3px;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+button.cancel-rant {
+  float: right;
+  background: #c0c0c0;
+  color: white;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 3px;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+button.cancel-rant:hover {
+  float: right;
+  background: white;
+  color: #c0c0c0;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #c0c0c0;
   border-radius: 3px;
   -webkit-transition: .25s;
   transition: .25s;
@@ -165,6 +207,40 @@ button.auth:hover {
   border-radius: 3px;
 }
 
+button.save-rant {
+  background: #1abc9c;
+  color: white;
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid white;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: .25s;
+  transition: .25s;
+  margin-top: 0px;
+  border-radius: 3px;
+  margin-right: 15px;
+}
+
+button.save-rant:hover {
+  background: white;
+  color: #1abc9c;
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid #1abc9c;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: .25s;
+  transition: .25s;
+  margin-top: 0px;
+  border-radius: 3px;
+  margin-right: 15px;
+}
+
 .main {
   width: 74.5687%;
   float: right;
@@ -191,9 +267,12 @@ button.auth:hover {
   box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
   border-radius: 3px;
   transition: .25s;
+  clear: both;
+  overflow: hidden;
 }
 
 .a-rant h3 {
+  float: left;
   font-family: 'Laila', serif;
   font-weight: 700;
   font-size: 29px;
@@ -207,11 +286,10 @@ button.auth:hover {
   clear: both;
   overflow: hidden;
   margin-top: 0px;
-  line-height: 150%;
 }
 
 button.edit-rant {
-  float: left;
+  float: right;
   background: #1abc9c;
   color: white;
   padding: 6px 12px;
@@ -240,4 +318,74 @@ button.edit-rant:hover {
   transition: .25s;
   border-radius: 3px;
   margin-left: 15px;
+  float: left;
+  margin-left: 15px;
+}
+
+.new-rant {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+  padding: 15px;
+  border-radius: 3px;
+  overflow: hidden;
+  clear: both;
+}
+
+.new-rant-header {
+  margin-bottom: 15px;
+  clear: both;
+  overflow: hidden;
+}
+
+.new-rant-title {
+  float: left;
+  width: 60%;
+}
+
+.new-rant-buttons {
+  float: right;
+}
+
+.new-rant-title .new-title {
+  font-family: Laila, serif;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #34495E;
+  border: none;
+  border-bottom: 2px solid #ECF0F1;
+  border-radius: 0;
+  padding: 0;
+  font-size: 29px;
+  resize: none;
+  width: 100%;
+  margin-bottom: 15px;
+  height: 45px;
+}
+
+.new-rant .new-body {
+  float: right;
+  font-size: 18px;
+  line-height: 1.1;
+  color: #34495E;
+  border: 2px solid #ECF0F1;
+  border-radius: 0;
+  padding: 0;
+  font-size: 29px;
+  width: 77%;
+  margin-bottom: 15px;
+  height: 45px;
+  min-height: 415px;
+}
+
+.small-user-area {
+  float: left;
+  width: 23%;
+}
+
+.small-user-photo {
+  display: block;
+  border: 4px dashed #34495e;
+  border-radius: 25px 25px 0;
+  height: 100px;
+  margin-bottom: 15px;
+  width: 90%;
 }

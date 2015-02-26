@@ -1,3 +1,18 @@
-{{textarea value=newTitle}}
-{{textarea value=newBody}}
-<button {{action 'newRant'}}>Save</button>
+
+<div class="new-rant">
+  <header class="new-rant-header">
+    <div class="new-rant-title">
+      {{textarea value=newTitle class="new-title"}}
+    </div>
+    <div class="new-rant-buttons">
+      <button class="save-rant" {{action 'newRant'}}>Save</button>
+      {{#link-to 'rants'}}
+        <button class="cancel-rant">Cancel</button>
+      {{/link-to}}
+    </div>
+  </header>
+  <div class="small-user-area">
+    <div class="small-user-photo"></div>
+  </div>
+  {{textarea value=newBody class="new-body"}}
+</div>

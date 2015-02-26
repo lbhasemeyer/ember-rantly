@@ -124,6 +124,42 @@ button.cancel-rant:hover {
   transition: .25s;
 }
 
+button.delete-rant {
+  float: right;
+  background: #f1c40f;
+  color: white;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 3px;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+button.delete-rant:hover {
+  float: right;
+  background: white;
+  color: #f1c40f;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #f1c40f;
+  border-radius: 3px;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
 aside.content {
   padding-left: 1.2%;
   color: white

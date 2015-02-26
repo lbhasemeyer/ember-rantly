@@ -13,6 +13,12 @@ export default Ember.ObjectController.extend({
           this.transitionToRoute('rants');
         }.bind(this));
       }
+    },
+    deleteRant: function(rant) {
+      rant.deleteRecord();
+      rant.save().then(function(){
+        this.transitionToRoute('rants');
+      }.bind(this));
     }
   }
 

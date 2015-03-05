@@ -52,114 +52,6 @@ a.brand {
   padding: 7px 15px;
 }
 
-button.new-rant {
-  float: right;
-  background: white;
-  color: #1abc9c;
-  display: inline-block;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid #1abc9c;
-  border-radius: 3px;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-
-button.new-rant:hover {
-  float: right;
-  background: #1abc9c;
-  color: white;
-  display: inline-block;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid #1abc9c;
-  border-radius: 3px;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-
-button.cancel-rant {
-  float: right;
-  background: #c0c0c0;
-  color: white;
-  display: inline-block;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid white;
-  border-radius: 3px;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-
-button.cancel-rant:hover {
-  float: right;
-  background: white;
-  color: #c0c0c0;
-  display: inline-block;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid #c0c0c0;
-  border-radius: 3px;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-
-button.delete-rant {
-  float: right;
-  background: #f1c40f;
-  color: white;
-  display: inline-block;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid white;
-  border-radius: 3px;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-
-button.delete-rant:hover {
-  float: right;
-  background: white;
-  color: #f1c40f;
-  display: inline-block;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid #f1c40f;
-  border-radius: 3px;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-
 aside.content {
   padding-left: 1.2%;
   color: white
@@ -209,73 +101,6 @@ aside.content {
   border-radius: 25px 25px 0;
 }
 
-button.auth {
-  float: left;
-  background: #1abc9c;
-  color: white;
-  width: 100%;
-  padding: 6px 12px;
-  border: 1px solid white;
-  display: inline-block;
-  font-size: 14px;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-transition: .25s;
-  transition: .25s;
-  margin-top: 15px;
-  border-radius: 3px;
-}
-
-button.auth:hover {
-  float: left;
-  background: white;
-  color: #1abc9c;
-  width: 100%;
-  padding: 6px 12px;
-  border: 1px solid #1abc9c;
-  display: inline-block;
-  font-size: 14px;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-transition: .25s;
-  transition: .25s;
-  margin-top: 15px;
-  border-radius: 3px;
-}
-
-button.save-rant {
-  background: #1abc9c;
-  color: white;
-  width: 100%;
-  padding: 6px 12px;
-  border: 1px solid white;
-  display: inline-block;
-  font-size: 14px;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-transition: .25s;
-  transition: .25s;
-  margin-top: 0px;
-  border-radius: 3px;
-  margin-right: 15px;
-}
-
-button.save-rant:hover {
-  background: white;
-  color: #1abc9c;
-  width: 100%;
-  padding: 6px 12px;
-  border: 1px solid #1abc9c;
-  display: inline-block;
-  font-size: 14px;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-transition: .25s;
-  transition: .25s;
-  margin-top: 0px;
-  border-radius: 3px;
-  margin-right: 15px;
-}
 
 .main {
   width: 74.5687%;
@@ -324,38 +149,6 @@ button.save-rant:hover {
   margin-top: 0px;
 }
 
-button.edit-rant {
-  float: right;
-  background: #1abc9c;
-  color: white;
-  padding: 6px 12px;
-  border: 1px solid white;
-  display: inline-block;
-  font-size: 14px;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-transition: .25s;
-  transition: .25s;
-  border-radius: 3px;
-  margin-left: 15px;
-  margin-left: 15px;
-}
-
-button.edit-rant:hover {
-  float: right;
-  background: white;
-  color: #1abc9c;
-  padding: 6px 12px;
-  border: 1px solid #1abc9c;
-  display: inline-block;
-  font-size: 14px;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-transition: .25s;
-  transition: .25s;
-  border-radius: 3px;
-  margin-left: 15px;
-}
 
 .new-rant {
   box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
@@ -423,4 +216,174 @@ button.edit-rant:hover {
   height: 100px;
   margin-bottom: 15px;
   width: 90%;
+}
+
+button.new-rant {
+  float: right;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-transition: .25s;
+  transition: .25s;
+  background: white;
+  color: #1abc9c;
+  border: 1px solid #1abc9c;
+}
+
+button.new-rant:hover {
+  float: right;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-transition: .25s;
+  transition: .25s;
+  background: #1abc9c;
+  color: white;
+  border: 1px solid #1abc9c;
+}
+
+button.auth {
+  float: left;
+  width: 100%;
+  padding: 6px 12px;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: .25s;
+  transition: .25s;
+  margin-top: 15px;
+  border-radius: 3px;
+  background: #1abc9c;
+  color: white;
+  border: 1px solid white;
+}
+
+button.auth:hover {
+  float: left;
+  width: 100%;
+  padding: 6px 12px;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: .25s;
+  transition: .25s;
+  margin-top: 15px;
+  border-radius: 3px;
+  background: white;
+  color: #1abc9c;
+  border: 1px solid #1abc9c;
+}
+
+button.edit-rant {
+  float: right;
+  padding: 6px 12px;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: .25s;
+  transition: .25s;
+  border-radius: 3px;
+  margin-right: 15px;
+  background: #1abc9c;
+  color: white;
+  border: 1px solid white;
+}
+
+button.edit-rant:hover {
+  float: right;
+  padding: 6px 12px;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: .25s;
+  transition: .25s;
+  border-radius: 3px;
+  margin-right: 15px;
+  background: white;
+  color: #1abc9c;
+  border: 1px solid #1abc9c;
+}
+
+button.save-rant {
+  border-radius: 3px;
+  margin-top: 0px;
+  margin-right: 15px;
+  background: #1abc9c;
+  color: white;
+  border: 1px solid white;
+}
+
+button.save-rant:hover {
+  border-radius: 3px;
+  margin-top: 0px;
+  margin-right: 15px;
+  background: white;
+  color: #1abc9c;
+  border: 1px solid #1abc9c;
+}
+
+button.cancel-rant {
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  background: #c0c0c0;
+  color: white;
+  border: 1px solid white;
+}
+
+button.cancel-rant:hover {
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  background: white;
+  color: #c0c0c0;
+  border: 1px solid #c0c0c0;
+}
+
+button.delete-rant {
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  background: #f1c40f;
+  color: white;
+  border: 1px solid white;
+}
+
+button.delete-rant:hover {
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  background: white;
+  color: #f1c40f;
+  border: 1px solid #f1c40f;
+}
+
+.new-rant-buttons button {
+  float: right;
+  padding: 6px 12px;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: .25s;
+  transition: .25s;
 }

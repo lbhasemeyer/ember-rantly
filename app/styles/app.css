@@ -387,3 +387,52 @@ button.delete-rant:hover {
   -webkit-transition: .25s;
   transition: .25s;
 }
+
+.all-users {
+  font-family: 'Laila', serif;
+  font-weight: 300;
+}
+
+.user-block {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+  width: 23.7%;
+  float: left;
+  min-height: 190px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.user-block a {
+  color: black;
+}
+
+.user-block:first-of-type {
+  margin-left: 0px;
+}
+
+.user-block:nth-of-type(4n+1) {
+  margin-left: 0px;
+}
+
+.user-block h5 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 4%;
+  margin-bottom: 0px;
+}
+
+.user-block h6 {
+  font-size: 11px;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.user-block .small-user-photo {
+  margin: auto;
+  margin-top: 5%;
+}
+
+.user-info {
+  margin-left: 5%;
+}

@@ -10,6 +10,7 @@ export default Ember.Controller.extend({
       var input = this.get('term');
       this.store.find('rant', {find: input}).then(function (result) {
         this.set('model', result);
+        this.transitionToRoute('rants.search');
         console.log(result);
         console.log(this);
       }.bind(this));

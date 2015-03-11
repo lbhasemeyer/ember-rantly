@@ -25,7 +25,7 @@
     <section class="content">
       <aside class="rants-navagation">
         <div class="search">
-          {{input placeholder="Search" value=term class="search-area"}}
+          {{input placeholder="Search" value=term class="search-area" type="search" action="doSearch"}}
         </div>
         <div class="user-area">
           <div class="user-photo"></div>
@@ -35,7 +35,6 @@
 
       <header class="bottom-header">
         {{#link-to 'rants.new'}}<button class="new-rant">New Rant</button>{{/link-to}}
-        <button {{action 'doSearch'}} >Search</button>
       </header>
 
       <div class="main">

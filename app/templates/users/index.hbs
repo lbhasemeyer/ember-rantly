@@ -1,7 +1,7 @@
 <section class="all-users">
   {{#each user in model}}
   <div class="user-block">
-    {{#link-to 'users.user' user}}
+    {{#link-to 'user' user}}
     <div class="small-user-photo"></div>
     <div class="user-info">
       <h5>{{user.first_name}} {{user.last_name}}</h5>

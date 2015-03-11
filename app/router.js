@@ -13,7 +13,9 @@ Router.map(function() {
     });
   });
   this.resource('users', function() {
-    this.route('user', { path:'/:user_id' })
+    this.resource('user', { path:'/:user_id' }, function() {
+      this.route('edit', { path:'/edit' });
+    });
   });
 });
 

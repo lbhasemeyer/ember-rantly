@@ -121,7 +121,7 @@ aside.content {
   padding-left: 15px;
 }
 
-.a-rant {
+.a-rant, .a-user {
   color: black;
   width: 100%;
   position: relative;
@@ -134,7 +134,7 @@ aside.content {
   overflow: hidden;
 }
 
-.a-rant h3 {
+.a-rant h3, .a-user h3 {
   float: left;
   font-family: 'Laila', serif;
   font-weight: 700;
@@ -144,7 +144,7 @@ aside.content {
   color: #34495e;
 }
 
-.rant-header {
+.rant-header, .user-header {
   margin-bottom: 15px;
   clear: both;
   overflow: hidden;
@@ -191,7 +191,7 @@ aside.content {
   height: 45px;
 }
 
-.new-rant .new-body {
+.new-rant .new-body, .new-email {
   float: right;
   font-size: 18px;
   line-height: 1.1;
@@ -292,7 +292,7 @@ button.auth:hover {
   border: 1px solid #1abc9c;
 }
 
-button.edit-rant {
+button.edit-rant, button.edit-user {
   float: right;
   padding: 6px 12px;
   display: inline-block;
@@ -308,7 +308,7 @@ button.edit-rant {
   border: 1px solid white;
 }
 
-button.edit-rant:hover {
+button.edit-rant:hover, button.edit-user:hover {
   float: right;
   padding: 6px 12px;
   display: inline-block;
@@ -439,4 +439,21 @@ button.delete-rant:hover {
 
 .user-info {
   margin-left: 5%;
+}
+
+.new-name {
+  font-family: Laila, serif;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #34495E;
+  border: none;
+  border-bottom: 2px solid #ECF0F1;
+  border-radius: 0;
+  padding: 0;
+  font-size: 29px;
+  resize: none;
+  width: 40%;
+  margin-bottom: 15px;
+  height: 45px;
+  margin-right: 50px;
 }

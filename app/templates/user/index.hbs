@@ -1,0 +1,12 @@
+<div class="a-user">
+  <header class="user-header">
+    <h3>{{first_name}} {{last_name}}</h3>
+    {{#link-to 'user.edit'}}
+      <button class="edit-user">Edit</button>
+    {{/link-to}}
+  </header>
+  <div class="small-user-area">
+    <div class="small-user-photo"></div>
+  </div>
+  <p>{{email}}</p>
+</div>

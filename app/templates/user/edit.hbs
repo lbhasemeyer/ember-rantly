@@ -1,0 +1,19 @@
+<div class="new-rant">
+  <header class="new-rant-header">
+    <div class="new-rant-title">
+      {{textarea value=first_name class="new-name"}}
+      {{textarea value=last_name class="new-name"}}
+    </div>
+    <div class="new-rant-buttons">
+      <button class="save-rant" {{action 'editUser' this}}>Save</button>
+      {{#link-to 'users'}}
+        <button class="cancel-rant">Cancel</button>
+      {{/link-to}}
+      <button class="delete-rant" {{action 'deleteUser' this}}>Delete</button>
+    </div>
+  </header>
+  <div class="small-user-area">
+    <div class="small-user-photo"></div>
+  </div>
+  {{textarea value=email class="new-email"}}
+</div>

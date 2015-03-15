@@ -467,3 +467,8 @@ button.delete-rant:hover {
 .spinner-area {
   margin: 50px;
 }
+
+#scroll {
+  height: 570px;
+  overflow: auto;
+}

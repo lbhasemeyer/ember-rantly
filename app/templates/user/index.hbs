@@ -1,4 +1,4 @@
-<div class="a-user">
+<div class="a-user show">
   <header class="user-header">
     <h3>{{first_name}} {{last_name}}</h3>
     {{#link-to 'user.edit'}}
@@ -10,3 +10,20 @@
   </div>
   <p>{{email}}</p>
 </div>
+
+
+
+{{#each rant in rants}}
+  <div class="a-rant">
+    <header class="rant-header">
+      {{#link-to 'rant' rant}}
+        <h3>{{rant.title}}</h3>
+      {{/link-to}}
+      <button class="edit-rant fa fa-pencil-square-o" {{action 'editRant' this}}>Edit</button>
+    </header>
+    <div class="small-user-area">
+      <div class="small-user-photo"></div>
+    </div>
+    <p>{{rant.body}}</p>
+  </div>
+{{/each}}

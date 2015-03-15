@@ -459,3 +459,7 @@ button.delete-rant:hover {
   height: 45px;
   margin-right: 50px;
 }
+
+.a-user.show {
+  margin-bottom: 100px;
+}

@@ -7,9 +7,9 @@
               {{textarea value=title class="new-title"}}
             </div>
             <div class="new-rant-buttons">
-              <button class="save-rant" {{action 'saveRant' this}}>Save</button>
-              <button class="cancel-rant" {{action 'cancelRant' this}}>Cancel</button>
-              <button class="delete-rant" {{action 'deleteRant' this}}>Delete</button>
+              <button class="save-rant fa fa-save" {{action 'saveRant' this}}>Save</button>
+              <button class="cancel-rant fa fa-share-square-o" {{action 'cancelRant' this}}>Cancel</button>
+              <button class="delete-rant fa fa-trash-o" {{action 'deleteRant' this}}>Delete</button>
             </div>
           </header>
           <div class="small-user-area">
@@ -23,7 +23,7 @@
             {{#link-to 'rant' this}}
               <h3>{{title}}</h3>
             {{/link-to}}
-            <button class="edit-rant" {{action 'editRant' this}}>Edit</button>
+            <button class="edit-rant fa fa-pencil-square-o" {{action 'editRant' this}}>Edit</button>
           </header>
           <div class="small-user-area">
             <div class="small-user-photo"></div>

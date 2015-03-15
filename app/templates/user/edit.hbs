@@ -5,11 +5,11 @@
       {{textarea value=last_name class="new-name"}}
     </div>
     <div class="new-rant-buttons">
-      <button class="save-rant" {{action 'editUser' this}}>Save</button>
+      <button class="save-rant fa fa-save" {{action 'editUser' this}}>Save</button>
       {{#link-to 'users'}}
-        <button class="cancel-rant">Cancel</button>
+        <button class="cancel-rant fa fa-share-square-o">Cancel</button>
       {{/link-to}}
-      <button class="delete-rant" {{action 'deleteUser' this}}>Delete</button>
+      <button class="delete-rant fa fa-trash-o" {{action 'deleteUser' this}}>Delete</button>
     </div>
   </header>
   <div class="small-user-area">

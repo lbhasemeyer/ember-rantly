@@ -463,3 +463,7 @@ button.delete-rant:hover {
 .a-user.show {
   margin-bottom: 100px;
 }
+
+.spinner-area {
+  margin: 50px;
+}

@@ -19,7 +19,7 @@ module.exports = function(environment) {
       'font-src': "'self' http://fonts.gstatic.com",
       'connect-src': "'self' localhost:3000",
       'img-src': "'self' http://www.gravatar.com",
-      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0",
+      'style-src': "'self' 'unsafe-inline' http://css-spinners.com/css/spinner/spinner.css http://fonts.googleapis.com http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0",
       'media-src': "'self'"
     },
 

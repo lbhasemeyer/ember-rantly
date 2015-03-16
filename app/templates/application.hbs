@@ -16,6 +16,9 @@
         {{#link-to 'users'}}
           Users
         {{/link-to}}
+        {{#link-to 'signup'}}
+          Sign Up
+        {{/link-to}}
       </div>
     </header>
 
@@ -24,23 +27,24 @@
         <div class="search">
           {{input placeholder="Search" value=term class="search-area" type="search" action="doSearch"}}
         </div>
-        <div class="user-area">
-          <div class="user-photo"></div>
-        </div>
 
-        <form>
-          Email:
-            {{input value=email}}
-          Password:
-            {{input value=password type="password"}}
-          <button type="submit" {{action 'signIn'}}>Submit</button>
-          {{#if errorMessage}}
-            <div>{{errorMessage}}</div>
-          {{/if}}
-        </form>
-        <button class="auth" {{action 'signOut'}}>
-          Log Out
-        </button>
+        {{#if loggedIn}}
+          <div class="user-area">
+            <div class="user-photo"></div>
+          </div>
+          <button class="auth signout" {{action 'signOut'}}>
+            Log Out
+          </button>
+        {{else}}
+          <form class="login-form">
+            {{input class="email-area" placeholder="Your Email" value=email}}
+            {{input class="pass-area" placeholder="Your Password" value=password type="password"}}
+            <button class="auth signin" type="submit" {{action 'signIn'}}>Log In</button>
+            {{#if errorMessage}}
+              <div>{{errorMessage}}</div>
+            {{/if}}
+          </form>
+        {{/if}}
       </aside>
 
       <header class="bottom-header">

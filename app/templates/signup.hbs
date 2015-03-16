@@ -1,0 +1,17 @@
+<main>
+  <form class="register-form">
+    First Name:
+    {{input placeholder="First Name" value=fName type=text}}
+    Last Name:
+    {{input placeholder="Last Name" value=lName}}
+    Email:
+    {{input placeholder="Email" value=userEmail}}<i class="register-field"></i>
+    Password:
+    {{input placeholder="Password" value=userPassword}}<i class="register-field"></i>
+    Password Confirmation:
+    {{input placeholder="Password Confirmation" value=passwordConfirm}}
+    <button class="button register-button" {{action 'register'}}>
+      Log in
+    </button>
+  </form>
+</main>

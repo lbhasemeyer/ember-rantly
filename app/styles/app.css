@@ -78,7 +78,7 @@ aside.content {
   width: 100%;
 }
 
-::-webkit-input-placeholder {
+.search-area::-webkit-input-placeholder {
   color: white;
 }
 
@@ -471,4 +471,25 @@ button.delete-rant:hover {
 #scroll {
   height: 570px;
   overflow: auto;
+}
+
+.login-form {
+  clear:both;
+  overflow: hidden;
+  position: relative;
+  padding: 15px;
+}
+
+.email-area, .pass-area {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid #ECF0F1;
+}
+
+.auth.signin {
+  margin-top: 0px;
+  margin-bottom: 15px;
 }

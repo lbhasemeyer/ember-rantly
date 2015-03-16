@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('signin');
+  this.route('signup');
   this.route('signout');
   this.resource('rants',  { path: '/' }, function() {
     this.route('search',  { path: '/search' });

@@ -16,9 +16,6 @@
         {{#link-to 'users'}}
           Users
         {{/link-to}}
-        {{#link-to styleguide}}
-          Sign Up
-        {{/link-to}}
       </div>
     </header>
 
@@ -30,7 +27,20 @@
         <div class="user-area">
           <div class="user-photo"></div>
         </div>
-        <button class="auth">Log Out</button>
+
+        <form>
+          Email:
+            {{input value=email}}
+          Password:
+            {{input value=password type="password"}}
+          <button type="submit" {{action 'signIn'}}>Submit</button>
+          {{#if errorMessage}}
+            <div>{{errorMessage}}</div>
+          {{/if}}
+        </form>
+        <button class="auth" {{action 'signOut'}}>
+          Log Out
+        </button>
       </aside>
 
       <header class="bottom-header">

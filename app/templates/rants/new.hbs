@@ -14,6 +14,11 @@
 
   <div class="small-user-area">
     <div class="small-user-photo"></div>
+    {{#if newBody}}
+      <p>{{newBody.length}} Characters</p>
+    {{else}}
+      <p>0 Characters</p>
+    {{/if}}
   </div>
 
   {{textarea value=newBody class="new-body"}}

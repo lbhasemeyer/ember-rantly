@@ -224,7 +224,6 @@ aside.content {
 
 button.new-rant {
   float: right;
-  display: inline-block;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
@@ -241,18 +240,6 @@ button.new-rant {
 }
 
 button.new-rant:hover {
-  float: right;
-  display: inline-block;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  border-radius: 3px;
-  -webkit-transition: .25s;
-  transition: .25s;
   background: #1abc9c;
   color: white;
   border: 1px solid #1abc9c;
@@ -275,17 +262,6 @@ button.auth {
 }
 
 button.auth:hover {
-  float: left;
-  width: 100%;
-  padding: 6px 12px;
-  display: inline-block;
-  font-size: 14px;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-transition: .25s;
-  transition: .25s;
-  margin-top: 15px;
-  border-radius: 3px;
   background: white;
   color: #1abc9c;
   border: 1px solid #1abc9c;
@@ -309,16 +285,6 @@ button.edit-rant, button.edit-user {
 }
 
 button.edit-rant:hover, button.edit-user:hover {
-  float: right;
-  padding: 6px 12px;
-  display: inline-block;
-  font-size: 14px;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-transition: .25s;
-  transition: .25s;
-  border-radius: 3px;
-  margin-right: 15px;
   background: white;
   color: #1abc9c;
   border: 1px solid #1abc9c;
@@ -335,9 +301,6 @@ button.save-rant {
 }
 
 button.save-rant:hover {
-  border-radius: 3px;
-  margin-top: 0px;
-  margin-right: 15px;
   background: white;
   color: #1abc9c;
   border: 1px solid #1abc9c;
@@ -354,10 +317,6 @@ button.cancel-rant {
 }
 
 button.cancel-rant:hover {
-  line-height: 1.42857;
-  text-align: center;
-  white-space: nowrap;
-  border-radius: 3px;
   background: white;
   color: #c0c0c0;
   border: 1px solid #c0c0c0;
@@ -374,10 +333,6 @@ button.delete-rant {
 }
 
 button.delete-rant:hover {
-  line-height: 1.42857;
-  text-align: center;
-  white-space: nowrap;
-  border-radius: 3px;
   background: white;
   color: #f1c40f;
   border: 1px solid #f1c40f;
@@ -525,18 +480,15 @@ button.delete-rant:hover {
 }
 
 button.register-button:hover {
-  width: 100%;
-  padding: 6px 12px;
-  display: inline-block;
-  font-size: 14px;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-transition: .25s;
-  transition: .25s;
-  margin-top: 15px;
-  border-radius: 3px;
   background: white;
   color: #1abc9c;
   border: 1px solid #1abc9c;
-  margin-top: 0px;
+}
+
+.small-user-area p {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #34495e;
+  margin-bottom: 7px;
 }

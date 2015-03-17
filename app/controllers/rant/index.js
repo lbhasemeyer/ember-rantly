@@ -23,7 +23,7 @@ export default Ember.ObjectController.extend({
 
     cancelRant: function(rant){
       this.set('isEditing', false);
-      this.transitionToRoute('rants');
+      this.transitionToRoute('rant');
     },
 
     deleteRant: function(rant) {

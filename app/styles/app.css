@@ -521,4 +521,22 @@ button.delete-rant:hover {
   background: #1abc9c;
   color: white;
   border: 1px solid white;
+  margin-top: 0px;
+}
+
+button.register-button:hover {
+  width: 100%;
+  padding: 6px 12px;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: .25s;
+  transition: .25s;
+  margin-top: 15px;
+  border-radius: 3px;
+  background: white;
+  color: #1abc9c;
+  border: 1px solid #1abc9c;
+  margin-top: 0px;
 }

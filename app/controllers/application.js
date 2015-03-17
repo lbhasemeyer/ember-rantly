@@ -33,13 +33,13 @@ export default Ember.Controller.extend({
         email: this.get("email"),
         password: this.get("password")
       };
-      controller.set('errorMessage', null)
+      controller.set('errorMessage', null);
       var session = controller.store.createRecord('session', data);
       session.save().then(function(){
         controller.set('loggedIn', true);
         localStorage.setItem('authToken', session._data.token);
         controller.transitionToRoute('rants');
-      })
+      });
     },
 
     signOut: function() {

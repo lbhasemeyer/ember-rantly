@@ -262,7 +262,6 @@ button.auth {
   float: left;
   width: 100%;
   padding: 6px 12px;
-  display: inline-block;
   font-size: 14px;
   vertical-align: middle;
   cursor: pointer;
@@ -497,4 +496,29 @@ button.delete-rant:hover {
 .auth.signin:hover {
   margin-top: 0px;
   margin-bottom: 15px;
+}
+
+.sign-up {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid #ECF0F1;
+}
+
+.button.register-button {
+  width: 100%;
+  padding: 6px 12px;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: .25s;
+  transition: .25s;
+  margin-top: 15px;
+  border-radius: 3px;
+  background: #1abc9c;
+  color: white;
+  border: 1px solid white;
 }

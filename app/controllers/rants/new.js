@@ -14,7 +14,7 @@ export default Ember.Controller.extend({
         Ember.$(".errors").append("<p>" + "Your rant must have a title." + "</p");
       } else if (body == null || body.length < 144) {
         Ember.$(".errors").append("<p>" + "Your rant must be at least 144 characters." + "</p");
-      } else {
+      } else if (body && title && body.trim() && title.trim()) {
         var rant = this.store.createRecord('rant', { title: title, body: body });
         this.set('newTitle', '');
         this.set('newBody', '');

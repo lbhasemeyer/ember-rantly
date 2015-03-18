@@ -506,3 +506,8 @@ button.register-button:hover {
   outline: none;
   border-bottom: 2px solid #1abc9c;
 }
+
+.errors p {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  color: #1abc9c;
+}

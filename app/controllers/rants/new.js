@@ -5,16 +5,16 @@ export default Ember.Controller.extend({
     newRant: function() {
       var title = this.get('newTitle');
       var body = this.get('newBody');
+      Ember.$(".errors").html('');
 
-      if (title == null) {
-        this.flashMessage({
-          content: 'Please enter a title.',
-          duration: 1000,
-          type: 'fail'
-        });
-      }
-
-      if (body && title && body.trim() && title.trim()) {
+      if (((title == null) || (title.length === 0) ) && ((body == null) || (body.length === 0) || (body.length < 144))) {
+        Ember.$(".errors").append("<p>" + "Your rant must have a title." + "</p");
+        Ember.$(".errors").append("<p>" + "Your rant must be at least 144 characters." + "</p");
+      } else if ((title == null) || (title.length === 0)) {
+        Ember.$(".errors").append("<p>" + "Your rant must have a title." + "</p");
+      } else if (body == null || body.length < 144) {
+        Ember.$(".errors").append("<p>" + "Your rant must be at least 144 characters." + "</p");
+      } else {
         var rant = this.store.createRecord('rant', { title: title, body: body });
         this.set('newTitle', '');
         this.set('newBody', '');

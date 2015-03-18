@@ -310,6 +310,7 @@ button.cancel-rant {
   line-height: 1.42857;
   text-align: center;
   white-space: nowrap;
+  margin-right: 15px;
   border-radius: 3px;
   background: #c0c0c0;
   color: white;

@@ -21,10 +21,18 @@ export default Ember.Controller.extend({
   actions: {
     doSearch: function() {
       var input = this.get('term');
-      this.store.find('rant', {find: input}).then(function (result) {
-        this.set('model', result);
-        this.transitionToRoute('rants.search', { queryParams: {term: input} });
-      }.bind(this));
+      var controller = this;
+
+      if ((typeof(input) == 'undefined') || (input === '')) {
+        Ember.$(".search-area").placeholder.html("This can't be blank!");
+      } else {
+        controller.store.find('rant', {find: input}).then(function (result) {
+          controller.set('model', result);
+        });
+        Ember.$(".search-area").placeholder.html("Search");
+        controller.set('search', '');
+        controller.transitionToRoute('rants.search', { queryParams: {term: input} });
+      }
     },
 
     signIn: function() {

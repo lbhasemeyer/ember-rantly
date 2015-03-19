@@ -22,14 +22,15 @@ export default Ember.Controller.extend({
     doSearch: function() {
       var input = this.get('term');
       var controller = this;
+      var place = document.getElementsByClassName("search-area")[0];
 
       if ((typeof(input) == 'undefined') || (input === '')) {
-        Ember.$(".search-area").placeholder.html("This can't be blank!");
+        place.placeholder = "This can't be blank!";
       } else {
         controller.store.find('rant', {find: input}).then(function (result) {
           controller.set('model', result);
         });
-        Ember.$(".search-area").placeholder.html("Search");
+        place.placeholder = "Search";
         controller.set('search', '');
         controller.transitionToRoute('rants.search', { queryParams: {term: input} });
       }

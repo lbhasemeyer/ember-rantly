@@ -24,8 +24,9 @@ export default Ember.Controller.extend({
       var controller = this;
       var place = document.getElementsByClassName("search-area")[0];
 
-      if ((typeof(input) == 'undefined') || (input === '')) {
+      if ((typeof(input) == 'undefined') || (input === '') || (input === null)) {
         place.placeholder = "This can't be blank!";
+        controller.set('search', '');
       } else {
         controller.store.find('rant', {find: input}).then(function (result) {
           controller.set('model', result);

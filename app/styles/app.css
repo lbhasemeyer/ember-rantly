@@ -429,7 +429,7 @@ button.delete-rant:hover {
 }
 
 .login-form {
-  clear:both;
+  clear: both;
   overflow: hidden;
   position: relative;
   padding: 15px;
@@ -511,4 +511,11 @@ button.register-button:hover {
 .errors p {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   color: #1abc9c;
+}
+
+.search-no.a-rant {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  min-height: 200px;
+  text-align: center;
+  line-height: 10;
 }

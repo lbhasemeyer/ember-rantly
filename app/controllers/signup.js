@@ -29,14 +29,13 @@ export default Ember.ArrayController.extend({
         localStorage.setItem('authToken', session._data.token);
         controller.transitionToRoute('rants');
       });
+
+      controller.set('firstName', '');
+      controller.set('lastName', '');
+      controller.set('email', '');
+      controller.set('password', '');
+      controller.set('passwordConfirmation', '');
     });
-
-    controller.set('firstName', '');
-    controller.set('lastName', '');
-    controller.set('email', '');
-    controller.set('password', '');
-    controller.set('passwordConfirmation', '');
-
     }
   }
 });

@@ -4,16 +4,16 @@ export default Ember.ObjectController.extend({
 
   actions: {
     editUser: function(user) {
-      var first_name = this.get('firstName');
-      var last_name = this.get('lastName');
+      var firstName = this.get('firstName');
+      var lastName = this.get('lastName');
       var email = this.get('email');
       Ember.$(".errors").html('');
 
-      if (((first_name == null) || (first_name.length === 0)) || ((last_name == null) || (last_name.length === 0)) || ((email == null) || (email.length === 0))) {
+      if (((firstName == null) || (firstName.length === 0)) || ((lastName == null) || (lastName.length === 0)) || ((email == null) || (email.length === 0))) {
         Ember.$(".errors").append("<p>" + "Please enter all fields." + "</p");
-      } else if (first_name && last_name && email) {
-        user.set('first_name', first_name);
-        user.set('last_name', last_name);
+      } else if (firstName && lastName && email) {
+        user.set('firstName', firstName);
+        user.set('lastName', lastName);
         user.set('email', email);
         user.save().then(function() {
           this.transitionToRoute('users');

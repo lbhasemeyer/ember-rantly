@@ -4,7 +4,7 @@ export default Ember.ObjectController.extend({
   isEditing: false,
 
   actions: {
-    editRant: function(rant){
+    editRant: function(){
       this.set('isEditing', true);
     },
 
@@ -30,17 +30,23 @@ export default Ember.ObjectController.extend({
       }
     },
 
-    cancelRant: function(rant){
+    cancelRant: function(){
       this.set('isEditing', false);
       this.transitionToRoute('rant');
     },
 
     deleteRant: function(rant) {
-      rant.deleteRecord();
-      rant.save().then(function(){
-        this.transitionToRoute('rants');
-      }.bind(this));
-    }
-  }
+      Ember.$('.new-rant').fadeOut();
+      var timing = 3000;
 
+      Ember.run.later(function() {
+        rant.deleteRecord();
+        rant.save().then(function(){
+          this.transitionToRoute('rants');
+        }.bind(this));
+      }, timing);
+    }
+
+
+  }
 });

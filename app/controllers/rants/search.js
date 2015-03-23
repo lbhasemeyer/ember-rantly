@@ -9,7 +9,7 @@ export default Ember.ArrayController.extend({
   }.property('term'),
 
   actions: {
-    editRant: function(rant){
+    editRant: function(){
       this.set('isEditing', true);
     },
 
@@ -26,7 +26,7 @@ export default Ember.ArrayController.extend({
       this.set('isEditing', false);
     },
 
-    cancelRant: function(rant){
+    cancelRant: function(){
       this.set('isEditing', false);
       this.transitionToRoute('rants');
     },

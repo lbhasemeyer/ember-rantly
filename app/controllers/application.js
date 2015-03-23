@@ -1,10 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  // queryParams: ['searchparams'],
-  // searchparams: null,
-  // needs: ['rants/index'],
-  loggedIn: false,
 
   setupController: function(controller) {
     controller.reset();
@@ -24,7 +20,7 @@ export default Ember.Controller.extend({
       var controller = this;
       var place = document.getElementsByClassName("search-area")[0];
 
-      if ((typeof(input) == 'undefined') || (input === '') || (input === null)) {
+      if ((typeof(input) === 'undefined') || (input === '') || (input === null)) {
         place.placeholder = "This can't be blank!";
         controller.set('search', '');
       } else {
@@ -54,6 +50,7 @@ export default Ember.Controller.extend({
 
     signOut: function() {
       localStorage.clear();
+      this.set('loggedIn', false);
       this.transitionToRoute('rants');
     }
   }

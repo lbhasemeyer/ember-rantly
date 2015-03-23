@@ -16,9 +16,18 @@
         {{#link-to 'users'}}
           Users
         {{/link-to}}
-        {{#link-to 'signup'}}
-          Sign Up
-        {{/link-to}}
+
+        {{#if loggedIn}}
+          <span {{action "signOut"}}>
+            {{#link-to "rants"}}
+              Sign Out
+            {{/link-to}}
+          </span>
+        {{else}}
+          {{#link-to 'signup'}}
+            Sign Up
+          {{/link-to}}
+        {{/if}}
       </div>
     </header>
 

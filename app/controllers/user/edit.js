@@ -4,8 +4,8 @@ export default Ember.ObjectController.extend({
 
   actions: {
     editUser: function(user) {
-      var first_name = this.get('first_name');
-      var last_name = this.get('last_name');
+      var first_name = this.get('firstName');
+      var last_name = this.get('lastName');
       var email = this.get('email');
       Ember.$(".errors").html('');
 

@@ -2,6 +2,36 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
+  needs: ['rant'],
+
+  currentUser: function() {
+    var currentUser = localStorage.user;
+    if (currentUser) {
+      return currentUser;
+    } else {
+      return null;
+    }
+  }.property().volatile(),
+
+  loggedIn: function() {
+    var authToken = localStorage.authToken;
+    if (authToken) {
+      return true;
+    } else {
+      return false;
+    }
+  }.property().volatile(),
+
+  // Laura, set this on sign in and also sign out get rid of it.
+  currentUserEmail: function() {
+    var email = localStorage.email;
+    if (email) {
+      return email;
+    } else {
+      return null;
+    }
+  }.property().volatile(),
+
   setupController: function(controller) {
     controller.reset();
   },
@@ -44,7 +74,9 @@ export default Ember.Controller.extend({
       session.save().then(function(){
         controller.set('loggedIn', true);
         localStorage.setItem('authToken', session._data.token);
+        localStorage.setItem('currentUser', session._data.user)
         controller.set('currentUser', session._data.user);
+// console.log(controller.currentUser);
         controller.transitionToRoute('rants');
       });
     },
@@ -52,7 +84,9 @@ export default Ember.Controller.extend({
     signOut: function() {
       localStorage.clear();
       this.set('loggedIn', false);
+      this.set('currentUser', null);
       this.transitionToRoute('rants');
+      location.reload();
     }
   }
 });

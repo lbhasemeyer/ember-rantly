@@ -2,6 +2,19 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   isEditing: false,
+  needs: ['application'],
+
+  belongsToUser: function() {
+    var rantUser = this.model._data.user.id;
+    var appUser = localStorage.currentUser ? localStorage.currentUser: null;
+console.log(rantUser);
+console.log(appUser);
+    if ((appUser>0) && (rantUser>0)) {
+      if (rantUser === appUser) {
+        return true;
+      }
+    }
+  }.property().volatile(),
 
   actions: {
     editRant: function(){
@@ -46,7 +59,6 @@ export default Ember.ObjectController.extend({
         }.bind(this));
       }, timing);
     }
-
 
   }
 });

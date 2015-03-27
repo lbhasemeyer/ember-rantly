@@ -46,6 +46,8 @@
           </button>
         {{else}}
           <form class="login-form">
+            <div class="errors">
+            </div>
             {{input class="email-area" placeholder="Your Email" value=email}}
             {{input class="pass-area" placeholder="Your Password" value=password type="password"}}
             <button class="auth signin" type="submit" {{action 'signIn'}}>Log In</button>

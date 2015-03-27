@@ -69,16 +69,25 @@ export default Ember.Controller.extend({
         email: this.get("email"),
         password: this.get("password")
       };
+      var theEmail = this.get("email"),
+          thePassword  = this.get("password")
+
       controller.set('errorMessage', null);
-      var session = controller.store.createRecord('session', data);
-      session.save().then(function(){
-        controller.set('loggedIn', true);
-        localStorage.setItem('authToken', session._data.token);
-        localStorage.setItem('currentUser', session._data.user.id);
-        controller.set('currentUser', session._data.user);
-console.log(controller.currentUser);
-        controller.transitionToRoute('rants');
-      });
+      Ember.$(".errors").html('');
+
+      if ((theEmail == undefined) || (thePassword == undefined)) {
+        Ember.$(".errors").append("<p>" + "Please enter all the fields." + "</p");
+      } else {
+        var session = controller.store.createRecord('session', data);
+        session.save().then(function(){
+          controller.set('loggedIn', true);
+          localStorage.setItem('authToken', session._data.token);
+          localStorage.setItem('currentUser', session._data.user.id);
+          controller.set('currentUser', session._data.user);
+          // console.log(controller.currentUser);
+          controller.transitionToRoute('rants');
+        });
+      }
     },
 
     signOut: function() {

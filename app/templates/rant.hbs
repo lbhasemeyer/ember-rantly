@@ -5,7 +5,7 @@
       {{textarea value=title class="new-title"}}
     </div>
 
-    {{#if rant.belongsToUser}}
+    {{#if belongsToUser}}
       <div class="new-rant-buttons">
         <button class="delete-rant fa fa-trash-o" {{action 'deleteRant' this}}>Delete</button>
         <button class="cancel-rant fa fa-share-square-o" {{action 'cancelRant' this}}>Cancel</button>
@@ -27,7 +27,7 @@
   <header class="rant-header">
     <h3>{{title}}</h3>
 
-    {{#if rant.belongsToUser}}
+    {{#if belongsToUser}}
       <button class="edit-rant fa fa-pencil-square-o" {{action 'editRant' this}}>Edit</button>
     {{/if}}
 

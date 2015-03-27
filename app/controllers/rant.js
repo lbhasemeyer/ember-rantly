@@ -5,15 +5,12 @@ export default Ember.ObjectController.extend({
   needs: ['application'],
 
   belongsToUser: function() {
-    var rantUser = this.model._data.user.id;
+    var rantUser = this.model._data.user;
     var appUser = localStorage.currentUser ? localStorage.currentUser: null;
-console.log(rantUser);
-console.log(appUser);
-    if ((appUser>0) && (rantUser>0)) {
-      if (rantUser === appUser) {
+    if ((appUser != null) && (rantUser != null))
+      if (rantUser.id == appUser) {
         return true;
       }
-    }
   }.property().volatile(),
 
   actions: {

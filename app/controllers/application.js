@@ -74,7 +74,7 @@ export default Ember.Controller.extend({
       session.save().then(function(){
         controller.set('loggedIn', true);
         localStorage.setItem('authToken', session._data.token);
-        localStorage.setItem('currentUser', session._data.user.id)
+        localStorage.setItem('currentUser', session._data.user.id);
         controller.set('currentUser', session._data.user);
 console.log(controller.currentUser);
         controller.transitionToRoute('rants');

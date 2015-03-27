@@ -11,11 +11,11 @@ export default Ember.ArrayController.extend({
 
       var user = controller.store.createRecord('user',
       { firstName: this.get('first'),
-      lastName: this.get('last'),
-      email: this.get('email'),
-      password: this.get('password'),
-      passwordConfirmation: this.get('passwordconfirmation')
-    });
+        lastName: this.get('last'),
+        email: this.get('email'),
+        password: this.get('password'),
+        passwordConfirmation: this.get('passwordconfirmation')
+      });
 
     return user.save().then(function(){
       var data = {
@@ -29,7 +29,7 @@ export default Ember.ArrayController.extend({
         localStorage.setItem('authToken', session._data.token);
         localStorage.setItem('currentUser', session._data.user.id)
         controller.set('currentUser', session._data.user);
-// console.log(controller.currentUser);
+        // console.log(controller.currentUser);
         controller.transitionToRoute('rants');
       });
 

@@ -18,7 +18,7 @@ export default Ember.ArrayController.extend({
       Ember.$(".errors").html('');
 
       if ((firstName == undefined) || (lastName == undefined) || (email == undefined) || (password == undefined) || (passwordConfirmation == undefined)) {
-        Ember.$(".errors").append("<p>" + "Please enter all the fields." + "</p");
+        Ember.$(".errors").append("<p>" + "Please enter all the fields." + "</p>");
       } else {
 
         var user = controller.store.createRecord('user',

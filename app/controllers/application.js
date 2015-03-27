@@ -69,28 +69,29 @@ export default Ember.Controller.extend({
         email: this.get("email"),
         password: this.get("password")
       };
-      var theEmail = this.get("email"),
-          thePassword  = this.get("password")
-
       controller.set('errorMessage', null);
-      Ember.$(".errors").html('');
+      Ember.$(".errors-login").html('');
+      Ember.$(".errors-login").html('');
+
+      var theEmail = this.get("email"),
+          thePassword  = this.get("password");
 
       if ((theEmail == undefined) || (thePassword == undefined)) {
-        Ember.$(".errors").append("<p>" + "Please enter all the fields." + "</p");
+        Ember.$(".errors-login").append("<p>" + "The email and password do not match." + "</p>");
       } else {
         var session = controller.store.createRecord('session', data);
-        if (session._data.token == undefined) {
-          Ember.$(".errors").append("<p>" + "You entered an incorrect email or password" + "</p");
-        } else {
-          session.save().then(function(){
+        session.save().then(function(){
+          if (session._data.success === true) {
             controller.set('loggedIn', true);
             localStorage.setItem('authToken', session._data.token);
             localStorage.setItem('currentUser', session._data.user.id);
             controller.set('currentUser', session._data.user);
             // console.log(controller.currentUser);
             controller.transitionToRoute('rants');
-          });
-        }
+          } else {
+            Ember.$(".errors-login").append("<p>" + "The email and password do not match." + "</p>");
+          }
+        });
       }
     },
 

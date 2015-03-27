@@ -13,11 +13,11 @@
         {{#link-to 'rants'}}
           Rants
         {{/link-to}}
-        {{#link-to 'users'}}
-          Users
-        {{/link-to}}
 
         {{#if loggedIn}}
+          {{#link-to 'users'}}
+            Users
+          {{/link-to}}
           <span {{action "signOut"}}>
             {{#link-to "rants"}}
               Sign Out
@@ -59,7 +59,9 @@
       </aside>
 
       <header class="bottom-header">
-        {{#link-to 'rants.new'}}<button class="new-rant">New Rant</button>{{/link-to}}
+        {{#if loggedIn}}
+          {{#link-to 'rants.new'}}<button class="new-rant">New Rant</button>{{/link-to}}
+        {{/if}}  
       </header>
 
       <div class="main" id="scroll">

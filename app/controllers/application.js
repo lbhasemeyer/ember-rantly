@@ -79,14 +79,18 @@ export default Ember.Controller.extend({
         Ember.$(".errors").append("<p>" + "Please enter all the fields." + "</p");
       } else {
         var session = controller.store.createRecord('session', data);
-        session.save().then(function(){
-          controller.set('loggedIn', true);
-          localStorage.setItem('authToken', session._data.token);
-          localStorage.setItem('currentUser', session._data.user.id);
-          controller.set('currentUser', session._data.user);
-          // console.log(controller.currentUser);
-          controller.transitionToRoute('rants');
-        });
+        if (session._data.token == undefined) {
+          Ember.$(".errors").append("<p>" + "You entered an incorrect email or password" + "</p");
+        } else {
+          session.save().then(function(){
+            controller.set('loggedIn', true);
+            localStorage.setItem('authToken', session._data.token);
+            localStorage.setItem('currentUser', session._data.user.id);
+            controller.set('currentUser', session._data.user);
+            // console.log(controller.currentUser);
+            controller.transitionToRoute('rants');
+          });
+        }
       }
     },
 

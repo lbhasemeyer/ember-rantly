@@ -1,3 +1,6 @@
+@-webkit-keyframes fade-out{0%{opacity:1}100%{opacity:0}}
+.fade-out{-webkit-animation:fade-out .4s ease-out}
+
 body, html {
   margin: 0px;
   height: 100%;
